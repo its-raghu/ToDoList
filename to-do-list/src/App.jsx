@@ -10,6 +10,17 @@ function App(){
     setToDoItems(prevValue=>[...prevValue,inputText]
     );
   }
+  function deleteItem(id){
+    setToDoItems((prevValue)=>{
+      return(
+        prevValue.filter((toDoItems, index)=>{
+          return(
+            index !== id
+          )
+        })
+      )
+    })
+  }
 
   return(
     <div className='h-screen flex justify-center items-center font-bold italic text-[#40534C] '>
@@ -22,7 +33,9 @@ function App(){
       {toDoItems.map((item, index)=>(
         <ToDoItem 
         key={index}
+        id={index}
         item ={item}
+        handleDelete={deleteItem}
         />
       ))}
       </ul>
