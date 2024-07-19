@@ -1,14 +1,13 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import TextArea from "./TextArea";
 import ToDoItem from './ToDoItem';
 
 function App(){
-  const [toDoItem, setToDoItem] = useState([]);
-  }
+  const [toDoItems, setToDoItems] = useState([]);
+  
 
   function handleClick(inputText){
-    setToDoItem(prevValue=>
-      [...prevValue,inputText]
+    setToDoItems(prevValue=>[...prevValue,inputText]
     );
   }
 
@@ -20,18 +19,16 @@ function App(){
       textClick={handleClick}
       />
       <ul>
-      {toDoItem.map(items=>(
+      {toDoItems.map((item, index)=>(
         <ToDoItem 
+        key={index}
         item ={item}
         />
       ))}
-        <ToDoItem 
-        key={index}
-        items ={Items}
-        />
       </ul>
     </div>
   </div>
   );
 
+}
 export default App;
