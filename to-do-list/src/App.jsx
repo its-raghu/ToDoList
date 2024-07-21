@@ -22,10 +22,10 @@ function App(){
     })
   }
 
-  return(
-    <div className='h-screen flex justify-center items-center font-bold italic text-[#40534C] '>
-    <div className='bg-[#67ffe6] max-w-[350px] h-[500px] max-h-[100%] rounded-lg p-[1rem]'>
-      <h1 className='text-5xl text-center m-[2rem] m-b-[1.5rem] bg-[#7ccfff] p-[0.5rem] rounded-md'>To-Do</h1>
+         return(   
+    <div className='h-screen flex justify-center items-center font-bold italic bg-[#EBF4F6] text-[#EBF4F6]'>
+    <div className='bg-[#37B7C3] max-w-[350px] h-[500px] max-h-[100%] rounded-lg p-[1rem]'>
+      <h1 className='text-5xl text-center m-[2rem] m-b-[1.5rem] bg-[#088395] p-[0.5rem] rounded-md'>To-Do</h1>
       <TextArea 
       textClick={handleClick}
       />
